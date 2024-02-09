@@ -1,13 +1,13 @@
 <pre>
 <?php
   function createSelectQuery(string $tbName, $search = null){
-      $queryInit ='SELECT * FROM ' . $tbName;
+      $query ='SELECT * FROM ' . $tbName;
       
       if($search === null){
-          return $queryInit;
+          return $query;
       };
       
-      $query = $queryInit . ' WHERE ';
+      $query .= ' WHERE ';
     
       foreach($search as $key => $value){
         $queryFin .= $key . ' = ' . $value;
