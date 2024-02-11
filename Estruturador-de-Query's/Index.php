@@ -7,7 +7,7 @@
           return $query;
       };
       
-      //essa falta de espaço na linha abaixo serve para que no foreach eu possa adicionar espaços tamnto no inicio quanto no fim da string
+      //essa falta de espaço na linha abaixo serve para que no foreach eu possa adicionar espaços tanto no inicio quanto no fim da string
       $query .= ' WHERE';
       
       foreach($search as $key => $value){
