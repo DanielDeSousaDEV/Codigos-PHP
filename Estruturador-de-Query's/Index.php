@@ -7,14 +7,13 @@
           return $query;
       };
       
-      //essa falta de espaço na linha abaixo serve para que no foreach eu possa adicionar espaços tanto no inicio quanto no fim da string
-      $query .= ' WHERE';
+      $query .= ' WHERE ';
       
       foreach($search as $key => $value){
-        $queryFin .= ' ' . $key . ' = ' . $value . ' ,';
+        $queryFin .= $key . ' = ' . $value . ' , ';
       };
       
-      $regex = '/[ ][,]$/';
+      $regex = '/[ ][,][ ]$/';
       $replace = ';';
       $subject = $queryFin;
 
