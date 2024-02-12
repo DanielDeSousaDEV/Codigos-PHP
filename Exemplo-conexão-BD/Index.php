@@ -17,7 +17,7 @@
   }
 </style>
 <?php
-   require_once('con.php');
+   require_once('conn.php');
    
    $query = 'SELECT * FROM tb_carro ;';
    
