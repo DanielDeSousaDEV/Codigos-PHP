@@ -57,7 +57,7 @@
             echo "<tr>
                       <td>$data[id_carro]</td>
                       <td>$data[nome_carro]</td>
-                      <td>$dataFK[user_name]</td>
+                      <td><a href=\"perfil.php?id_perfil=$dataFK[id_user]\" >$dataFK[user_name]</a></td>
                  </tr>";
             
        };
@@ -82,7 +82,9 @@
     * </table>
     */
 
+
    //var_dump($data);
+
 
    while($data = $stmt -> fetch()){
        //var_dump($data);
