@@ -29,8 +29,10 @@
                     };
                 }
             }
-        ?>
 
+            var_dump(pessoa::class)
+        ?>
+        <hr />
         <?php
             $funcao = function ($novaIdade)
             {
