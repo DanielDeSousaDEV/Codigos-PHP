@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teste De Closure</title>
 </head>
 <body>
     <pre>
@@ -17,7 +17,6 @@
             $pessoa1 = new pessoa(10);
             
             var_dump($funcao->call($pessoa1, 5));
-            
         ?>
         <hr />
         <?php
