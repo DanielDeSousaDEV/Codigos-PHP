@@ -8,6 +8,19 @@
 <body>
     <pre>
         <?php
+            $funcao = function ($novaIdade)
+            {
+                $this->idade = $novaIdade;
+                return $this->idade;;
+            };
+
+            $pessoa1 = new pessoa(10);
+            
+            var_dump($funcao->call($pessoa1, 5));
+            
+        ?>
+        <hr />
+        <?php
     
             class pessoa {
     
@@ -30,6 +43,7 @@
                 return $this->idade;
             };
 
+            //copia de um objeto que é atualizado automaticamente
             $closurePessoa = $funcao->bindTo($pessoa1);
 
             var_dump($closurePessoa);
@@ -38,6 +52,7 @@
     
             var_dump($closurePessoa);
         ?>
+        <hr />
     </pre>
 </body>
 </html>
