@@ -16,7 +16,7 @@
             class pessoa {
     
                 public function __construct(
-                    public int $idade
+                    public int $idade = 0
                 )
                 {}
                 
@@ -42,7 +42,7 @@
             $funcao = function ($novaIdade)
             {
                 $this->idade = $novaIdade;
-                return $this->idade;;
+                return $this->idade;
             };
 
             $pessoa1 = new pessoa(10);
