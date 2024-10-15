@@ -28,9 +28,17 @@
                 )
                 {}
                 
-                public function atribuirIdade($num)
+                public function adicionarIdade($num)
                 {
                     $this->idade += $num;
+                }
+
+                public function atribuirIdadeClosure()
+                {
+                    return function ($num)
+                    {
+                        $this->idade = $num;
+                    };
                 }
             }
             
@@ -47,11 +55,19 @@
 
             var_dump($closurePessoa);
 
-            $pessoa1->atribuirIdade(5);
+            $pessoa1->adicionarIdade(5);
     
             var_dump($closurePessoa);
         ?>
         <hr />
+        <?php
+            $funcao = Closure::fromCallable($pessoa1->atribuirIdadeClosure());
+
+            $funcao(50);
+
+            var_dump($funcao);
+            var_dump($pessoa1);
+        ?>
     </pre>
 </body>
 </html>
