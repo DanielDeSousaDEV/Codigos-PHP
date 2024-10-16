@@ -34,7 +34,7 @@
         class talker {
             /**
              *#Sobrescrita de Traits
-             *quando duas traits se sobrescrevem podemos definir qual metodo "prevalecerar" ou simplesmente nomear algum deles e usa-lo normalmente 
+             *quando duas traits se sobrescrevem podemos definir qual metodo "prevalecerar" ou simplesmente nomear algum deles e usa-lo normalmente e tambem podemos alterar a visibilidade dos metodos
              *  insteadof - defini qual metodo deve prevalecer
              *  as - renomeia um metodo
              */
@@ -42,6 +42,7 @@
                 talkA::talkDowm insteadof talkB;
                 talkB::talkUp insteadof talkA;
                 talkB::talkDowm as otherTalk;
+                talkA::talkUp as protected anotherTalk;
             }
         }
     ?>
@@ -52,6 +53,8 @@
         $Talker1->talkDowm();
         $Talker1->talkUp();
         $Talker1->otherTalk();
+        //error por causa do seu escopo
+        $Talker1->anotherTalk();
     ?>
 </body>
 </html>
