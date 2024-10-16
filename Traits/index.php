@@ -59,6 +59,9 @@
          * 1.metodos definidos na classe filho 
          * 2.metodos definidos na trait
          * 3.metodos definidos na classe pai
+         * 
+         * #Observação:
+         * Caso eu queira usar o metodo da classe pai eu posso usar o Parent
          */
     ?>
     <hr />
