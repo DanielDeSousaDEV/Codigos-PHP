@@ -9,18 +9,36 @@
     <?php
         //traits são como caracteriscas de uma classe (pode ser usada para uma herança simples)
         trait serVivo {
+
+            #metodo somente da trait
             //defino que todo ser vivo deve respirar
             function respirar ()
             {
                 echo $this->name . " respirou / metodo " . __METHOD__ . "<br/>";
             }
             
+            #metodo da trait e da classe a ser instanciada
             function descansar () 
             {
                 echo $this->name . " descansou / metodo " . __METHOD__ . "<br/>";
             }
+
+            #metodo da trait e da classe pai
+            public function comprimentar() 
+            {
+                echo $this->name . " comprimentou / metodo " . __METHOD__ . "<br/>";
+            }
         }
         
+        class base {
+            public string $name;
+
+            public function comprimentar () 
+            {
+                echo $this->name . " descansou / metodo " . __METHOD__ . "<br/>";               
+            }
+        }
+
         class pessoa {
             //defino que pessoa deve ter caracteristicas de ser vivo
             use serVivo;
@@ -42,6 +60,7 @@
 
         $pessoa1->respirar();
         $pessoa1->descansar();
+        $pessoa1->comprimentar();
     ?>
 </body>
 </html>
