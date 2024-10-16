@@ -48,7 +48,9 @@
             $pessoa1 = new pessoa(10);
             
             //chama uma função como se fosse dentro dela
+            var_dump($pessoa1);
             var_dump($funcao->call($pessoa1, 5));
+            var_dump($pessoa1);
         ?>
         <hr />
         <?php
