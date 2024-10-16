@@ -53,6 +53,13 @@
                 echo $this->name . " descansou / metodo " . __METHOD__ . "<br/>";
             }
         }
+        
+        /**
+         * # Ordem de Precedencia da Herança
+         * 1.metodos definidos na classe filho 
+         * 2.metodos definidos na trait
+         * 3.metodos definidos na classe pai
+         */
     ?>
     <hr />
     <?php
