@@ -12,10 +12,15 @@
             //defino que todo ser vivo deve respirar
             function respirar ()
             {
-                echo $this->name . " respirou";
+                echo $this->name . " respirou / metodo " . __METHOD__ . "<br/>";
+            }
+            
+            function descansar () 
+            {
+                echo $this->name . " descansou / metodo " . __METHOD__ . "<br/>";
             }
         }
-
+        
         class pessoa {
             //defino que pessoa deve ter caracteristicas de ser vivo
             use serVivo;
@@ -23,6 +28,12 @@
             public function __construct(
                 public string $name
             ){}
+                
+            //se definir alguma coisa (atributo ou metodo) com o mesmo nome que foi definido na trait ele sera sobrescrito
+            public function descansar()
+            {
+                echo $this->name . " descansou / metodo " . __METHOD__ . "<br/>";
+            }
         }
     ?>
     <hr />
@@ -30,6 +41,7 @@
         $pessoa1 = new pessoa("Daniel");
 
         $pessoa1->respirar();
+        $pessoa1->descansar();
     ?>
 </body>
 </html>
