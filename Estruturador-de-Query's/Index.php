@@ -194,7 +194,7 @@
   //$testeFunc = createUpdateQuery($tbNameTest, $valuesTest, $coditionTest);
   //$testeFunc = createInsertQuery($tbNameTest, $valuesTest);
   //$testeFunc = createDeleteQuery($tbNameTest, $searchTest);
-  $testeFunc = createSelectQuery($tbNameTest, $searchTest);
+  $testeFunc = createSelectQuery($tbNameTest, $coditionTest);
 
   var_dump($testeFunc);
 ?>
